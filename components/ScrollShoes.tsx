@@ -2,19 +2,39 @@
 
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { ShoeImage } from "@/components/ShoeImage";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { products } from "@/data/products";
 import { INSTAGRAM_URL } from "@/lib/constants";
 import { clipReveal, fadeUp } from "@/lib/motion";
 
 export function ScrollShoes() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [trackScrollRange, setTrackScrollRange] = useState(0);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["2%", "-72%"]);
+  useEffect(() => {
+    if (!trackRef.current) return;
+    const updateRange = () => {
+      const trackWidth = trackRef.current ? trackRef.current.scrollWidth : 0;
+      const viewportWidth = window.innerWidth;
+      setTrackScrollRange(Math.max(0, trackWidth - viewportWidth));
+    };
+    
+    // Slight delay to ensure content has rendered and layout is stable
+    const timer = setTimeout(updateRange, 100);
+    window.addEventListener("resize", updateRange);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("resize", updateRange);
+    };
+  }, []);
+
+  const x = useTransform(scrollYProgress, [0, 1], ["0px", `-${trackScrollRange}px`]);
   const progressWidth = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   const hintOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
 
@@ -57,6 +77,7 @@ export function ScrollShoes() {
         {/* Horizontal track */}
         <div className="relative flex-1 overflow-hidden sport-slash">
           <motion.div
+            ref={trackRef}
             style={{ x }}
             className="absolute left-0 top-1/2 flex -translate-y-1/2 gap-6 px-5 md:gap-10 md:px-10"
           >
