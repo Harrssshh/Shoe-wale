@@ -85,7 +85,7 @@ export function ScrollShoes() {
               <ShoeSlide key={product.id} product={product} index={i} totalItems={arr.length} progress={scrollYProgress} />
             ))}
             {/* End card */}
-            <div className="flex h-[min(55vh,420px)] w-[min(80vw,340px)] shrink-0 flex-col items-center justify-center rounded-2xl border border-volt/30 bg-volt/5 p-8 text-center md:w-[380px]">
+            <div className="flex h-[min(48vh,350px)] w-[min(80vw,340px)] shrink-0 flex-col items-center justify-center rounded-2xl border border-volt/30 bg-volt/5 p-8 text-center md:w-[380px]">
               <p className="font-display text-5xl text-volt">+100</p>
               <p className="mt-2 text-sm text-muted">More pairs in store</p>
               <a
@@ -135,7 +135,7 @@ function ShoeSlide({
       className="group relative w-[min(80vw,340px)] shrink-0 md:w-[380px]"
     >
       <div className="overflow-hidden rounded-2xl border border-white/10 bg-court transition-colors duration-300 group-hover:border-volt/40">
-        <div className="relative flex h-[min(55vh,420px)] items-start justify-center overflow-hidden bg-track sport-mesh pt-8 md:pt-12">
+        <div className="relative flex h-[min(48vh,350px)] items-start justify-center overflow-hidden bg-track sport-mesh pt-6 md:pt-8">
           <motion.div style={{ y: imgY }} className="relative h-[58%] w-[85%]">
             <ShoeImage
               src={product.image}
