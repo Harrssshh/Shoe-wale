@@ -15,12 +15,16 @@ export const MAP_LINK =
 export function getWhatsAppLink(message?: string): string {
   const cleanPhone = STORE_PHONE.replace(/[^0-9]/g, "");
   const baseUrl = `https://wa.me/${cleanPhone}`;
+
   if (message) {
     return `${baseUrl}?text=${encodeURIComponent(message)}`;
   }
+
   return baseUrl;
 }
 
-export function getProductWhatsAppLink(productName: string): string {
-  return getWhatsAppLink(`Hi Shoes Wale, I want to inquire about Sneaker`);
+export function getProductWhatsAppLink(): string {
+  return getWhatsAppLink(
+    "Hi Shoes Wale, I would like to inquire about your products."
+  );
 }

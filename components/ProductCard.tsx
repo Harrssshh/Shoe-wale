@@ -6,7 +6,8 @@ import { motion, useSpring } from "framer-motion";
 import { useRef, useState } from "react";
 import type { Product } from "@/data/products";
 import { formatPrice } from "@/data/products";
-import { getProductWhatsAppLink } from "../lib/constants";
+import { getProductWhatsAppLink } from "@/lib/constants";
+
 import { useMediaQuery } from "@/lib/useMediaQuery";
 import { fadeUp } from "@/lib/motion";
 import type { Variants } from "framer-motion";
@@ -122,7 +123,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
             transition={{ duration: 0.2, delay: 0.05 }}
           >
             <Link
-              href={getProductWhatsAppLink(product.name)}
+              href={getProductWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Order ${product.name} on WhatsApp`}
