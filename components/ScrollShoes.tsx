@@ -34,8 +34,8 @@ export function ScrollShoes() {
     };
   }, []);
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0px", `-${trackScrollRange}px`]);
-  const progressWidth = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const x = useTransform(scrollYProgress, [0, 0.85], ["0px", `-${trackScrollRange}px`]);
+  const progressWidth = useTransform(scrollYProgress, [0, 0.85], ["0%", "100%"]);
   const hintOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
 
   return (
@@ -127,7 +127,7 @@ function ShoeSlide({
   const end = (index + 1) / totalItems;
   const scale = useTransform(progress, [start, end], [0.88, 1]);
   const rotate = useTransform(progress, [start, end], [-6, 0]);
-  const imgY = useTransform(progress, [start, end], [30, 0]);
+  const imgY = useTransform(progress, [start, end], [15, 0]);
 
   return (
     <motion.div
@@ -135,8 +135,8 @@ function ShoeSlide({
       className="group relative w-[min(80vw,340px)] shrink-0 md:w-[380px]"
     >
       <div className="overflow-hidden rounded-2xl border border-white/10 bg-court transition-colors duration-300 group-hover:border-volt/40">
-        <div className="relative flex h-[min(55vh,420px)] items-center justify-center overflow-hidden bg-track sport-mesh">
-          <motion.div style={{ y: imgY }} className="relative h-[75%] w-[85%]">
+        <div className="relative flex h-[min(55vh,420px)] items-start justify-center overflow-hidden bg-track sport-mesh pt-8 md:pt-12">
+          <motion.div style={{ y: imgY }} className="relative h-[58%] w-[85%]">
             <ShoeImage
               src={product.image}
               alt={product.name}
