@@ -79,7 +79,7 @@ export function ScrollShoes() {
           <motion.div
             ref={trackRef}
             style={{ x }}
-            className="absolute left-0 top-1/2 flex -translate-y-1/2 gap-6 px-5 md:gap-10 md:px-10"
+            className="absolute left-0 top-4 flex gap-6 px-5 md:gap-10 md:px-10 md:top-6"
           >
             {products.slice(0, 6).map((product, i, arr) => (
               <ShoeSlide key={product.id} product={product} index={i} totalItems={arr.length} progress={scrollYProgress} />
