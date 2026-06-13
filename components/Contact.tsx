@@ -12,7 +12,7 @@ import {
   STORE_NAME,
   STORE_PHONE,
   getWhatsAppLink,
-} from "@/lib/constants";
+} from "../lib/constants";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
 export function Contact() {

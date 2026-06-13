@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { getWhatsAppLink } from "@/lib/constants";
+import { getWhatsAppLink } from "../lib/constants";
 
 export function WhatsAppButton() {
   const [keyboardOpen, setKeyboardOpen] = useState(false);

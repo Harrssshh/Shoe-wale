@@ -6,7 +6,7 @@ import { motion, useSpring } from "framer-motion";
 import { useRef, useState } from "react";
 import type { Product } from "@/data/products";
 import { formatPrice } from "@/data/products";
-import { getProductWhatsAppLink } from "@/lib/constants";
+import { getProductWhatsAppLink } from "../lib/constants";
 import { useMediaQuery } from "@/lib/useMediaQuery";
 import { fadeUp } from "@/lib/motion";
 import type { Variants } from "framer-motion";

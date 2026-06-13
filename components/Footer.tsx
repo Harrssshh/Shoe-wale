@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { INSTAGRAM_URL, MAP_LINK, getWhatsAppLink } from "@/lib/constants";
+import { INSTAGRAM_URL, MAP_LINK, getWhatsAppLink } from "../lib/constants";
 
 export function Footer() {
   return (
