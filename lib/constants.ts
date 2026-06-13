@@ -20,3 +20,7 @@ export function getWhatsAppLink(message?: string): string {
   }
   return baseUrl;
 }
+
+export function getProductWhatsAppLink(productName: string): string {
+  return getWhatsAppLink(`Hi Shoes Wale, I want to inquire about Sneaker`);
+}
