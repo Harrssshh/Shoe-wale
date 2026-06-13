@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480">
+  <rect width="480" height="480" rx="20" fill="#051a0a"/>
+  <ellipse cx="240" cy="390" rx="150" ry="18" fill="rgba(204,255,0,0.08)"/>
+  <path d="M95 310Q115 200 230 192Q360 180 395 245Q412 278 398 312Q340 345 240 345Q130 345 95 310Z" fill="#0a1a0a" stroke="#ccff00" stroke-width="2"/>
+  <path d="M135 275Q220 230 310 248Q360 260 375 232" fill="none" stroke="#ccff00" stroke-width="14" stroke-linecap="round"/>
+  <text x="240" y="70" text-anchor="middle" fill="#ccff00" font-family="sans-serif" font-size="12" font-weight="700" letter-spacing="4">PUMA RS-X</text>
+</svg>

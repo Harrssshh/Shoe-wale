@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480">
+  <rect width="480" height="480" rx="20" fill="#0f172a"/>
+  <ellipse cx="240" cy="390" rx="150" ry="18" fill="rgba(255,255,255,0.06)"/>
+  <path d="M95 310Q115 200 230 192Q360 180 395 245Q412 278 398 312Q340 345 240 345Q130 345 95 310Z" fill="#111" stroke="#fff" stroke-width="2"/>
+  <path d="M135 275Q220 230 310 248Q360 260 375 232" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+  <rect x="165" y="248" width="85" height="24" rx="2" fill="#fff"/>
+  <text x="240" y="70" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="700" letter-spacing="4">ADIDAS ULTRA</text>
+</svg>

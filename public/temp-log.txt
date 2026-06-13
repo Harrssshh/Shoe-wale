@@ -1,0 +1,5 @@
+--- PARSING SCRAPED FILE ---
+Found "jordan" at 230226: Jordanian Dinar"},"JPY":{"iso":"JPY","format":"{symbol}{amount}","symbol":"\u00a5","offset":1,"name":"Japanese Yen"},"KES":{"iso":"KES","format":"{symbol}{amount}","symbol":"KSh","offset":100,"name":"Kenyan Shilling"},"KGS":{"iso":"KGS","format":"{symbol}{amount}","symbol":"\u0441\u043e\u043c","offs
+
+Found "nike" at 10135: niketan School ke samne, 100ft mali colony road, sec. 3, Udaipur&quot;" name="description" /><link rel="alternate" href="android-app://com.instagram.android/https/instagram.com/_u/shoes_wale7773/" /><link rel="canonical" href="https://www.instagram.com/shoes_wale7773/" /><meta property="al:ios:app_n
+
